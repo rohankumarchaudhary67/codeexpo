@@ -21,7 +21,7 @@ export default function Footer() {
                                     </Link>
                                 </div>
                             </div>
-                            <div className="text-gray-400">Code Expo is an India's First Code Expo for beginners to unlock new opportunities in the tech world.</div>
+                            <div className="text-gray-400">Code Expo is an India&apos;s First Code Expo for beginners to unlock new opportunities in the tech world.</div>
                         </div>
 
                         {/* 2nd, 3rd and 4th blocks */}

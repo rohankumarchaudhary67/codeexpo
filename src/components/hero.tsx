@@ -24,7 +24,7 @@ export default function Hero() {
                     {/* Section header */}
                     <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16 flex flex-col justify-center items-center">
                         <img src="/logo/logo.png" data-aos="fade-up" data-aos-delay="200" className='py-2' alt="" />
-                        <p className="text-xl bg-clip-text text-transparent text-white pb-6" data-aos="fade-up" data-aos-delay="200">Code Expo is an India's First Code Expo for beginners to unlock new opportunities in the tech world. Much like the Auto Expo, this event showcases a myriad of tech projects, offering attendees the chance to contribute across diverse tech stacks.</p>
+                        <p className="text-xl bg-clip-text text-transparent text-white pb-6" data-aos="fade-up" data-aos-delay="200">Code Expo is an India&apos;s First Code Expo for beginners to unlock new opportunities in the tech world. Much like the Auto Expo, this event showcases a myriad of tech projects, offering attendees the chance to contribute across diverse tech stacks.</p>
                         <h1 className='mb-4 text-2xl md:text-3xl font-mono font-semibold' data-aos="fade-up">19 - 21 Apr, 2024</h1>
                         <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:pt-6">
                             <div data-aos="fade-up" data-aos-delay="400">

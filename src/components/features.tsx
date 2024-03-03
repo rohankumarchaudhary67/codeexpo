@@ -6,7 +6,7 @@ export default function Features() {
 
                     {/* Section header */}
                     <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                        <h2 className="h2 mb-4 flex justify-center items-center">India's First <img src="./logo/logo-text.png" className="h-8 md:h-12 px-4" alt="" /> for Beginners</h2>
+                        <h2 className="h2 mb-4 flex justify-center items-center">India&apos;s First <img src="./logo/logo-text.png" className="h-8 md:h-12 px-4" alt="" /> for Beginners</h2>
                         <p className="text-xl text-gray-400">Much like the Auto Expo, this event showcases a myriad of tech projects, offering attendees the chance to contribute across diverse tech stacks.</p>
                     </div>
 
