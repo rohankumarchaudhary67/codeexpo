@@ -1,0 +1,28 @@
+.event-image-bg {
+    /* background-image: url("/images/event-image-bg.png"); */
+    background: rgb(9, 9, 121);
+    background: linear-gradient(132deg, rgba(9, 9, 121, 1) 0%, rgba(0, 0, 0, 1) 29%, rgba(0, 0, 0, 1) 80%, rgba(253, 0, 255, 1) 100%);
+}
+
+.testimonial-box-shadow {
+    background: rgb(65, 74, 246);
+    background: linear-gradient(141deg, rgba(65, 74, 246, 1) 0%, rgba(0, 0, 0, 1) 21%, rgba(0, 0, 0, 1) 81%, rgba(221, 49, 250, 1) 100%);
+    border-radius: 2rem;
+}
+
+.color-heading {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 500px) {
+    .event-image-bg {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(141deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    .color-heading {
+        color: white;
+    }
+}
