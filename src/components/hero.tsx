@@ -24,27 +24,27 @@ export default function Hero() {
                     {/* Section header */}
                     <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16 flex flex-col justify-center items-center">
                         <img src="/logo/logo.png" data-aos="fade-up" data-aos-delay="200" className='py-2' alt="" />
-                        <p className="text-xl bg-clip-text text-transparent text-white pb-6" data-aos="fade-up" data-aos-delay="200">Code Expo is an India&apos;s First Code Expo for beginners to unlock new opportunities in the tech world. Much like the Auto Expo, this event showcases a myriad of tech projects, offering attendees the chance to contribute across diverse tech stacks.</p>
-                        <h1 className='mb-4 text-2xl md:text-3xl font-mono font-semibold' data-aos="fade-up">19 - 21 Apr, 2024</h1>
-                        <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:pt-6">
-                            <div data-aos="fade-up" data-aos-delay="400">
-                                <div className="relative inline-flex  group">
+                        <p className="text-sm md:text-xl bg-clip-text text-transparent text-white pb-6 px-1" data-aos="fade-up" data-aos-delay="200">India&apos;s First Code Expo for beginners to unlock new opportunities in the tech world. Much like the Auto Expo, this event showcases a myriad of tech projects, offering attendees the chance to contribute across diverse tech stacks.</p>
+                        <h1 className='mb-4 text-2xl md:text-3xl font-mono font-bold' data-aos="fade-up">19<sup>th</sup>-21<sup>th</sup> Apr, 2024</h1>
+                        <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:pt-6 w-full md:w-auto">
+                            <div className='md:pt-0 pt-5 w-full md:w-auto' data-aos="fade-up" data-aos-delay="400">
+                                <div className="relative inline-flex group w-full md:w-auto">
                                     <div
-                                        className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3fc1c9] via-[#67ced4] to-[#2f9fa6] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                                        className="absolute w-full transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3fc1c9] via-[#67ced4] to-[#2f9fa6] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
                                     </div>
                                     <a href="#" title="Get quote now"
-                                        className="relative inline-flex items-center justify-center px-8 py-3 text-lg text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                                        className="w-full md:w-auto relative inline-flex items-center justify-center px-8 py-3 text-lg text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                                         role="button">Register Now
                                     </a>
                                 </div>
                             </div>
-                            <div className='md:pl-8' data-aos="fade-up" data-aos-delay="600">
-                                <div className="relative inline-flex  group">
+                            <div className='md:pl-8 md:pt-0 pt-8 w-full md:w-auto' data-aos="fade-up" data-aos-delay="600">
+                                <div className="relative inline-flex w-full md:w-auto group">
                                     <div
                                         className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3fc1c9] via-[#67ced4] to-[#2f9fa6] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
                                     </div>
                                     <Link href="https://discord.gg/CXHWBCHs" target='_blank' title="Get quote now"
-                                        className="relative inline-flex items-center justify-center px-8 py-3 text-lg text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                                        className="w-full md:w-auto relative inline-flex items-center justify-center px-8 py-3 text-lg text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                                         role="button">Join Discord
                                     </Link>
                                 </div>

@@ -9,7 +9,7 @@ export default function Zigzag() {
                     {/* Section header */}
                     <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
                         <div className="inline-flex text-sm font-semibold py-1 px-3 m-2 text-green-600 bg-green-200 rounded-full mb-4">Reach goals that matter</div>
-                        <h1 className="h2 mb-4 bg-clip-text text-transparent text-white flex justify-center items-center"><img src="./logo/logo-text.png" className="h-8 md:h-12" alt="" /></h1>
+                        <h1 className="h2 mb-4 bg-clip-text text-transparent text-white flex justify-center items-center"><img src="./logo/logo-text.png" className="h-12" alt="" /></h1>
                         <p className="text-xl text-gray-400"><span className='font-bold text-[#67ced4]'>Our Events:</span> Projects Expo, Tech Talks & Mentorships...</p>
                     </div>
 
@@ -27,7 +27,7 @@ export default function Zigzag() {
                                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                                     <div className="font-architects-daughter text-xl text-[#2f9fa6] mb-2 flex">Code Expo presents</div>
                                     <h3 className="h3 mb-3">Projects Exhibition for Beginners</h3>
-                                    <p className="text-xl text-gray-400 mb-4">Code Expo showcase real-time projects in various tech stacks, including Web Dev, Android Dev, AI/ML, and more.</p>
+                                    <p className="md:text-xl text-gray-400 mb-4">Code Expo showcase real-time projects in various tech stacks, including Web Dev, Android Dev, AI/ML, and more.</p>
                                     <ul className="text-lg text-gray-400 -mb-2">
                                         <li className="flex items-center mb-2">
                                             <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +63,7 @@ export default function Zigzag() {
                                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
                                     <div className="font-architects-daughter text-xl text-[#2f9fa6] mb-2">Code Expo presents</div>
                                     <h3 className="h3 mb-3">Tech Talks for Beginners</h3>
-                                    <p className="text-xl text-gray-400 mb-4">Some of the tech experts give some tech talks for beginners which help to decide that which fields or tech stack is better to start something new.</p>
+                                    <p className="md:text-xl text-gray-400 mb-4">Some of the tech experts give some tech talks for beginners which help to decide that which fields or tech stack is better to start something new.</p>
                                     <ul className="text-lg text-gray-400 -mb-2">
                                         <li className="flex items-center mb-2">
                                             <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,7 @@ export default function Zigzag() {
                                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                                     <div className="font-architects-daughter text-xl text-[#2f9fa6] mb-2">Code Expo presents</div>
                                     <h3 className="h3 mb-3">Mentorship Programs</h3>
-                                    <p className="text-xl text-gray-400 mb-4">CodeExpo provide some mentorships program for the some developers who took participate in Code Expo event.</p>
+                                    <p className="md:text-xl text-gray-400 mb-4">CodeExpo provide some mentorships program for the some developers who took participate in Code Expo event.</p>
                                     <ul className="text-lg text-gray-400 -mb-2">
                                         <li className="flex items-center mb-2">
                                             <svg className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">

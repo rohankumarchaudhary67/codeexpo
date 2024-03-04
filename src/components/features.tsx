@@ -6,8 +6,9 @@ export default function Features() {
 
                     {/* Section header */}
                     <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                        <h2 className="h2 mb-4 flex justify-center items-center">India&apos;s First <img src="./logo/logo-text.png" className="h-8 md:h-12 px-4" alt="" /> for Beginners</h2>
-                        <p className="text-xl text-gray-400">Much like the Auto Expo, this event showcases a myriad of tech projects, offering attendees the chance to contribute across diverse tech stacks.</p>
+                        <h2 className="h2 mb-4 md:flex hidden md:justify-center md:items-center text-4xl">India&apos;s First <div className="flex justify-center items-center"><img src="/logo/logo-text.png" className="h-12 md:px-4" alt="" /></div> for Beginners</h2>
+                        <h2 className="h2 mb-4 md:hidden flex md:justify-center md:items-center text-4xl">India's First Code Expo for Beginners</h2>
+                        <p className="text-sm px-1 md:text-xl text-gray-400">Much like the Auto Expo, this event showcases a myriad of tech projects, offering attendees the chance to contribute across diverse tech stacks.</p>
                     </div>
 
                     {/* Items */}
