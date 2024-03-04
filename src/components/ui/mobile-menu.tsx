@@ -61,26 +61,26 @@ export default function MobileMenu() {
             >
                 <ul className="bg-gray-800 px-4 py-2">
                     <li>
-                        <Link href="/event" className="flex font-medium w-full text-[#fe00feb5] hover:text-[#04abcb] py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                        <Link href="/event" className="flex font-medium w-full text-[#3fc1c9] hover:text-[#04abcb] py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
                             Event
                         </Link>
                     </li>
                     <li>
-                        <Link href="/tickets" className="flex font-medium w-full text-[#fe00feb5] hover:text-[#04abcb] py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                        <Link href="/tickets" className="flex font-medium w-full text-[#3fc1c9] hover:text-[#04abcb] py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
                             Tickets
                         </Link>
                     </li>
                     <li>
-                        <Link href="/sponsors" className="flex font-medium w-full text-[#fe00feb5] hover:text-[#04abcb] py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                        <Link href="/sponsors" className="flex font-medium w-full text-[#3fc1c9] hover:text-[#04abcb] py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
                             Sponsors
                         </Link>
                     </li>
                     <li>
                         <Link
                             href="/register-yourself"
-                            className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white bg-[#b815ca] hover:bg-[#672f93] transition duration-150 ease-in-out" onClick={() => setMobileNavOpen(false)}
+                            className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white bg-[#2f9fa6] hover:bg-[#2d767a] transition duration-150 ease-in-out" onClick={() => setMobileNavOpen(false)}
                         >
-                            Get Started
+                            Register Now
                         </Link>
                     </li>
                 </ul>
