@@ -7,7 +7,7 @@ export default function Project_Form() {
                 <h1 className="mb-8 font-extrabold text-4xl" data-aos="fade-up">Apply for Project</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                     <section data-aos="fade-rght">
-                        <section className="md:mx-20 mx-6 text-center">
+                        <section className="md:mx-20 mx-6 text-center md:mt-6">
                             <div className="mb-5">
                                 <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" required />
                             </div>
@@ -54,7 +54,7 @@ export default function Project_Form() {
                                 <li>Take advantage of networking opportunities with other exhibitors and event participants.</li>
                             </ul>
                             <p className="px-2 md:pl-2 pt-4 text-gray-500">Thank you for considering Code Expo as a platform to showcase your project. We look forward to reviewing your application and having you as a valuable participant in our exhibition.</p>
-                            <p className="px-2 md:pl-2 pt-2 text-gray-500">For any inquiries, please contact "team.codeexpo@gmail.com".</p>
+                            <p className="px-2 md:pl-2 pt-2 text-gray-500">For any inquiries, please contact &ldquo;team.codeexpo@gmail.com&ldquo;.</p>
                             <p className="px-2 md:pl-2 pt-2 text-gray-500">Best of luck with your application!</p>
                         </div>
                     </aside>
