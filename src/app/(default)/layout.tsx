@@ -1,12 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 import PageIllustration from '@/components/page-illustration'
-import Footer from '@/components/ui/footer'
 import React from 'react'
 
 export default function DefaultLayout({
@@ -30,8 +29,6 @@ export default function DefaultLayout({
                 <PageIllustration />
                 {children}
             </main>
-
-            <Footer />
         </>
     )
 }
