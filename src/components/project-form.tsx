@@ -3,11 +3,11 @@ import Link from "next/link"
 export default function Project_Form() {
     return (
         <>
-            <div className="p-6 md:p-10 md:mx-20 md:px-20 flex flex-col justify-center items-center">
+            <div className="py-6 md:p-10 md:mx-20 md:px-20 flex flex-col justify-center items-center">
                 <h1 className="mb-8 font-extrabold text-4xl" data-aos="fade-up">Apply for Project</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                     <section data-aos="fade-rght">
-                        <section className="mx-20 text-center">
+                        <section className="md:mx-20 mx-6 text-center">
                             <div className="mb-5">
                                 <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" required />
                             </div>
@@ -43,7 +43,7 @@ export default function Project_Form() {
                     <aside className="" data-aos="fade-left">
                         <div className="px-2 md:px-2 rounded">
                             <h2 className="font-bold text-2xl">Instructions</h2>
-                            <ul className="list-disc mt-4 list-inside text-gray-300 pl-4">
+                            <ul className="list-disc mt-4 list-inside text-gray-300 md:pl-4 px-2 text-sm md:text-lg">
                                 <li>Ensure that your project aligns with the themes or categories specified for CodeExpo.</li>
                                 <li>Complete the online application form available on our website.</li>
                                 <li>Provide accurate and detailed information about your project, including its purpose, technology stack, and any unique features.</li>
@@ -53,9 +53,9 @@ export default function Project_Form() {
                                 <li>Be prepared to engage with event attendees interested in your project.</li>
                                 <li>Take advantage of networking opportunities with other exhibitors and event participants.</li>
                             </ul>
-                            <p className="pl-2 pt-4 text-gray-500">Thank you for considering Code Expo as a platform to showcase your project. We look forward to reviewing your application and having you as a valuable participant in our exhibition.</p>
-                            <p className="pl-2 pt-2 text-gray-500">For any inquiries, please contact "team.codeexpo@gmail.com".</p>
-                            <p className="pl-2 pt-2 text-gray-500">Best of luck with your application!</p>
+                            <p className="px-2 md:pl-2 pt-4 text-gray-500">Thank you for considering Code Expo as a platform to showcase your project. We look forward to reviewing your application and having you as a valuable participant in our exhibition.</p>
+                            <p className="px-2 md:pl-2 pt-2 text-gray-500">For any inquiries, please contact "team.codeexpo@gmail.com".</p>
+                            <p className="px-2 md:pl-2 pt-2 text-gray-500">Best of luck with your application!</p>
                         </div>
                     </aside>
                 </div>
