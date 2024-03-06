@@ -3,45 +3,69 @@ import Link from "next/link"
 export default function Project_Form() {
     return (
         <>
-            <div className="py-6 md:p-10 md:mx-20 md:px-20 flex flex-col justify-center items-center">
-                <h1 className="mb-8 font-extrabold text-4xl" data-aos="fade-up">Apply for Project</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-                    <section data-aos="fade-rght">
-                        <section className="md:mx-20 mx-6 text-center md:mt-6">
-                            <div className="mb-5">
-                                <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" required />
+            <section className="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-black md:mt-6">
+                <form>
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="username">Full Name</label>
+                            <input id="username" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="emailAddress">Email Address</label>
+                            <input id="emailAddress" type="email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="password">Phone Number</label>
+                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="passwordConfirmation">Alternate Phone Number</label>
+                            <input id="passwordConfirmation" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="passwordConfirmation">Project Name</label>
+                            <input id="passwordConfirmation" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="passwordConfirmation">Project Details</label>
+                            <textarea id="textarea" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
+                        </div>
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="passwordConfirmation">The Problem it solves</label>
+                            <textarea id="textarea" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
+                        </div>
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="passwordConfirmation">Challenges we ran into it</label>
+                            <textarea id="textarea" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
+                        </div>
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="passwordConfirmation">Project Link / GitHub Repo Link</label>
+                            <input id="passwordConfirmation" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+                        <div>
+                            <label className="text-white dark:text-gray-200" htmlFor="passwordConfirmation">Your GitHub username</label>
+                            <input id="passwordConfirmation" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                        </div>
+                    </div>
+
+                    <div className="flex justify-end mt-10 md:mt-6">
+                        <div className="relative inline-flex w-full md:w-auto group">
+                            <div
+                                className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3fc1c9] via-[#67ced4] to-[#2f9fa6] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
                             </div>
-                            <div className="mb-5">
-                                <input placeholder="E-mail Id" type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                            </div>
-                            <div className="mb-5">
-                                <input placeholder="Phone Number" type="number" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                            </div>
-                            <div className="mb-5">
-                                <input placeholder="Project Name" type="text" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                            </div>
-                            <div className="mb-5">
-                                <textarea placeholder="Project Details" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                            </div>
-                            <div className="mb-5">
-                                <input placeholder="Project Link / GitHub Repo Link" type="text" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                            </div>
-                            <div className="mb-5">
-                                <input placeholder="Your GitHub username" type="text" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-                            </div>
-                            <div className="relative inline-flex w-full md:w-auto group mt-4">
-                                <div
-                                    className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3fc1c9] via-[#67ced4] to-[#2f9fa6] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
-                                </div>
-                                <Link href="https://discord.gg/CXHWBCHs" target='_blank' title="Get quote now"
-                                    className="w-full md:w-auto relative inline-flex items-center justify-center px-8 py-3 text-lg text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                                    role="button">Apply Now
-                                </Link>
-                            </div>
-                        </section>
-                    </section>
-                    <aside className="" data-aos="fade-left">
-                        <div className="px-2 md:px-2 rounded">
+                            <Link href={"/apply-for-project"} title="Get quote now"
+                                className="w-full md:w-auto relative inline-flex items-center justify-center px-8 py-3 text-lg text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                                role="button">Submit Project
+                            </Link>
+                        </div>
+                    </div>
+                </form>
+                <section>
+                <div>
+                <div className="pt-14 md:px-2 rounded">
                             <h2 className="font-bold text-2xl">Instructions</h2>
                             <ul className="list-disc mt-4 list-inside text-gray-300 md:pl-4 px-2 text-sm md:text-lg">
                                 <li>Ensure that your project aligns with the themes or categories specified for CodeExpo.</li>
@@ -57,9 +81,10 @@ export default function Project_Form() {
                             <p className="px-2 md:pl-2 pt-2 text-gray-500">For any inquiries, please contact &ldquo;team.codeexpo@gmail.com&ldquo;.</p>
                             <p className="px-2 md:pl-2 pt-2 text-gray-500">Best of luck with your application!</p>
                         </div>
-                    </aside>
+
                 </div>
-            </div>
+            </section>
+            </section>
         </>
     )
 }

@@ -41,11 +41,8 @@ export default function Project_banner() {
                                     </Link>
                                 </div>
                             </form>
-
                         </div>
-
                     </div>
-
                 </div>
             </section>
         </>
