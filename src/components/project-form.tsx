@@ -64,8 +64,8 @@ export default function Project_Form() {
                     </div>
                 </form>
                 <section>
-                <div>
-                <div className="pt-14 md:px-2 rounded">
+                    <div>
+                        <div className="pt-14 md:px-2 rounded">
                             <h2 className="font-bold text-2xl">Instructions</h2>
                             <ul className="list-disc mt-4 list-inside text-gray-300 md:pl-4 px-2 text-sm md:text-lg">
                                 <li>Ensure that your project aligns with the themes or categories specified for CodeExpo.</li>
@@ -78,12 +78,12 @@ export default function Project_Form() {
                                 <li>Take advantage of networking opportunities with other exhibitors and event participants.</li>
                             </ul>
                             <p className="px-2 md:pl-2 pt-4 text-gray-500">Thank you for considering Code Expo as a platform to showcase your project. We look forward to reviewing your application and having you as a valuable participant in our exhibition.</p>
-                            <p className="px-2 md:pl-2 pt-2 text-gray-500">For any inquiries, please contact &ldquo;team.codeexpo@gmail.com&ldquo;.</p>
+                            <p className="px-2 md:pl-2 pt-2 text-gray-500">For any inquiries, please contact &ldquo;team@codeexpo.in&ldquo;.</p>
                             <p className="px-2 md:pl-2 pt-2 text-gray-500">Best of luck with your application!</p>
                         </div>
 
-                </div>
-            </section>
+                    </div>
+                </section>
             </section>
         </>
     )
