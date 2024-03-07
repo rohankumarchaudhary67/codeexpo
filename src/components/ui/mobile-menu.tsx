@@ -77,7 +77,7 @@ export default function MobileMenu() {
                     </li>
                     <li>
                         <Link
-                            href="/register-yourself"
+                            href="/registration"
                             className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white bg-[#2f9fa6] hover:bg-[#2d767a] transition duration-150 ease-in-out" onClick={() => setMobileNavOpen(false)}
                         >
                             Register Now

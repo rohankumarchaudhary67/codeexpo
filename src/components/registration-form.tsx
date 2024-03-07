@@ -65,7 +65,7 @@ export default function Registration_Form() {
                                 <li>Participants may contribute individually or as part of a team, as specified by the participating companies.</li>
                                 <li>Treat fellow developers, contributors, and representatives of participating companies with respect and professionalism.</li>
                                 <li>Discrimination, harassment, or any form of inappropriate behavior will not be tolerated.</li>
-                                <li>Respect the intellectual property rights of participating companies. Any contributions made during CodeExpo should comply with the project's specified terms.</li>
+                                <li>Respect the intellectual property rights of participating companies. Any contributions made during CodeExpo should comply with the project specified terms.</li>
                                 <li>Abide by a high standard of ethical conduct, including honesty and integrity in all interactions.</li>
                                 <li>Refrain from engaging in any activities that may compromise the security or integrity of CodeExpo or its participants.</li>
                             </ul>
