@@ -1,44 +1,92 @@
-import Link from "next/link"
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export default function Registration_Form() {
+interface RegistrationFormProps {
+    registrationData: {
+        fullName: string;
+        email: string;
+        phoneNumber: string;
+        collegeName: string;
+        collegeYear: string;
+        branchName: string;
+    };
+    setRegistrationData: React.Dispatch<React.SetStateAction<{
+        fullName: string;
+        email: string;
+        phoneNumber: string;
+        collegeName: string;
+        collegeYear: string;
+        branchName: string;
+    }>>;
+}
+
+const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, setRegistrationData }) => {
+
+    const registerNowBtn = async () => {
+        if (registrationData.fullName == "") {
+            toast.error("Please provide your name...");
+        } else {
+            if (registrationData.email == "") {
+                toast.error("Please provide an email...");
+            } else {
+                if (registrationData.email.endsWith("@gmail.com")) {
+                    if (registrationData.phoneNumber == "") {
+                        toast.error("Please provide a phone number...");
+                    } else {
+                        try {
+                            const response = await axios.post("/api/registration", registrationData);
+                            console.log(response);
+                        } catch (error: any) {
+                            toast.error(error.message);
+                        }
+                    }
+                } else {
+                    toast.error("Please provide a valid gmail id...");
+                }
+            }
+        }
+    }
+
     return (
         <>
+            <ToastContainer />
             <section className="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-black md:mt-6">
-                <form>
+                <div>
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="username">Full Name</label>
-                            <input id="username" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input id="fullName" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.fullName} onChange={(e) => setRegistrationData({ ...registrationData, fullName: e.target.value })} />
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="emailAddress">Email Address</label>
-                            <input id="emailAddress" type="email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input id="email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.email} onChange={(e) => setRegistrationData({ ...registrationData, email: e.target.value })} />
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="password">Phone Number</label>
-                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.phoneNumber} onChange={(e) => setRegistrationData({ ...registrationData, phoneNumber: e.target.value })} />
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="password">College Name</label>
-                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.collegeName} onChange={(e) => setRegistrationData({ ...registrationData, collegeName: e.target.value })} />
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="password">College Year</label>
-                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.collegeYear} onChange={(e) => setRegistrationData({ ...registrationData, collegeYear: e.target.value })} />
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="password">Branch Name</label>
-                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" />
+                            <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.branchName} onChange={(e) => setRegistrationData({ ...registrationData, branchName: e.target.value })} />
                         </div>
 
                         <div className="flex items-center mb-4">
-                            <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                                <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I read all the <a href="/" className="underline font-semibold">Terms & Conditions</a> and <a href="/" className="underline font-semibold">Privacy Policy</a>.</label>
+                            <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I read all the <a href="/" className="underline font-semibold">Terms & Conditions</a> and <a href="/" className="underline font-semibold">Privacy Policy</a>.</label>
                         </div>
                     </div>
 
@@ -47,13 +95,11 @@ export default function Registration_Form() {
                             <div
                                 className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#3fc1c9] via-[#67ced4] to-[#2f9fa6] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
                             </div>
-                            <Link href={"/apply-for-project"} title="Get quote now"
-                                className="w-full md:w-auto relative inline-flex items-center justify-center px-8 py-3 text-lg text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                                role="button">Register Now
-                            </Link>
+                            <button onClick={registerNowBtn} className="w-full md:w-auto relative inline-flex items-center justify-center px-8 py-3 text-lg text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">Register Now
+                            </button>
                         </div>
                     </div>
-                </form>
+                </div>
 
                 <section>
                     <div>
@@ -80,3 +126,5 @@ export default function Registration_Form() {
         </>
     )
 }
+
+export default Registration_Form;
