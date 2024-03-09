@@ -21,11 +21,11 @@ interface RegistrationFormProps {
     }>>;
     error:String,
     setError: React.Dispatch<React.SetStateAction<string>>;
-    progress: number,
     setProgress: React.Dispatch<React.SetStateAction<number>>;
+    setRegistrationComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, setRegistrationData, error, setError, progress, setProgress }) => {
+const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, setRegistrationData, error, setError, setProgress, setRegistrationComplete }) => {
 
     const registerNowBtn = async () => {
         if (registrationData.fullName === "") {
@@ -56,6 +56,9 @@ const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, 
                 setError("emailExists")
             } else if (response.data.reason === "phoneExists") {
                 setError("phoneExists")
+            }
+            if(response.data.success){
+                setRegistrationComplete(true);
             }
             setProgress(100);
         } catch (error: any) {
