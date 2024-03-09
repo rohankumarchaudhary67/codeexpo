@@ -19,34 +19,49 @@ interface RegistrationFormProps {
         collegeYear: string;
         branchName: string;
     }>>;
+    error:String,
+    setError: React.Dispatch<React.SetStateAction<string>>;
+    progress: number,
+    setProgress: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, setRegistrationData }) => {
+const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, setRegistrationData, error, setError, progress, setProgress }) => {
 
     const registerNowBtn = async () => {
-        if (registrationData.fullName == "") {
-            toast.error("Please provide your name...");
-        } else {
-            if (registrationData.email == "") {
-                toast.error("Please provide an email...");
-            } else {
-                if (registrationData.email.endsWith("@gmail.com")) {
-                    if (registrationData.phoneNumber == "") {
-                        toast.error("Please provide a phone number...");
-                    } else {
-                        try {
-                            const response = await axios.post("/api/registration", registrationData);
-                            console.log(response);
-                        } catch (error: any) {
-                            toast.error(error.message);
-                        }
-                    }
-                } else {
-                    toast.error("Please provide a valid gmail id...");
-                }
-            }
+        if (registrationData.fullName === "") {
+            setError('emptyName');
+            return;
         }
-    }
+
+        if (registrationData.email === "") {
+            setError('emptyEmail')
+            return;
+        }
+
+        if (!registrationData.email.endsWith("@gmail.com")) {
+            setError("invalidEmail")
+            return;
+        }
+
+        if (registrationData.phoneNumber === "") {
+            setError("emptyPhoneNumber")
+            return;
+        }
+
+        try {
+            setProgress(30);
+            const response = await axios.post("/api/registration", registrationData);
+            setProgress(90);
+            if (response.data.reason === "emailExists") {
+                setError("emailExists")
+            } else if (response.data.reason === "phoneExists") {
+                setError("phoneExists")
+            }
+            setProgress(100);
+        } catch (error: any) {
+            toast.error(error.message);
+        }
+    };
 
     return (
         <>
@@ -57,16 +72,22 @@ const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="username">Full Name</label>
                             <input id="fullName" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.fullName} onChange={(e) => setRegistrationData({ ...registrationData, fullName: e.target.value })} />
+                            {error=="emptyName" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your name</p> : <p></p>}
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="emailAddress">Email Address</label>
                             <input id="email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.email} onChange={(e) => setRegistrationData({ ...registrationData, email: e.target.value })} />
+                            {error=="emptyEmail" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your email</p> : <p></p>}
+                            {error=="invalidEmail" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Invalid Email</p> : <p></p>}
+                            {error=="emailExists" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Already registered with this email</p> : <p></p>}
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="password">Phone Number</label>
                             <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.phoneNumber} onChange={(e) => setRegistrationData({ ...registrationData, phoneNumber: e.target.value })} />
+                            {error=="emptyPhoneNumber" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your phone number</p> : <p></p>}
+                            {error=="phoneExists" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Already registered with this phone number</p> : <p></p>}
                         </div>
 
                         <div>

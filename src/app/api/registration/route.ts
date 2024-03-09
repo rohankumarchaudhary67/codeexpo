@@ -9,6 +9,26 @@ export async function POST(request: NextRequest) {
         const reqBody = await request.json();
         const { fullName, email, phoneNumber, collegeName, collegeYear, branchName } = reqBody;
 
+        const registrationWithEmail = await Registration.findOne({email});
+        if(registrationWithEmail){
+            return NextResponse.json({
+                error:"Email already exists",
+                reason:"emailExists",
+                success:false,
+                status:400
+            })
+        }
+
+        const registrationWithPhone = await Registration.findOne({phoneNumber});
+        if(registrationWithPhone){
+            return NextResponse.json({
+                error:"phone number already exists",
+                reason:"phoneExists",
+                success:false,
+                status:400
+            })
+        }
+
         const newRegistration = new Registration({
             fullName: fullName,
             email: email,
