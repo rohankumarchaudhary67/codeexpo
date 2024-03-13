@@ -40,6 +40,6 @@ const projectApplicationSchema = new mongoose.Schema({
     }
 }, { timestamps: true })
 
-const ProjectApplication = mongoose.models.projectApplications || mongoose.model("ProjectApplications", projectApplicationSchema);
+const ProjectApplication = mongoose.models.ProjectApplications || mongoose.model("ProjectApplications", projectApplicationSchema);
 
 export default ProjectApplication;
