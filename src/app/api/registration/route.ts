@@ -6,9 +6,11 @@ connect();
 
 export async function POST(request: NextRequest) {
     try {
+        // Extract data from frontend body
         const reqBody = await request.json();
         const { fullName, email, phoneNumber, collegeName, collegeYear, branchName } = reqBody;
 
+        // Check if email exists
         const registrationWithEmail = await Registration.findOne({email});
         if(registrationWithEmail){
             return NextResponse.json({
@@ -19,6 +21,7 @@ export async function POST(request: NextRequest) {
             })
         }
 
+        // Check if phone number exists
         const registrationWithPhone = await Registration.findOne({phoneNumber});
         if(registrationWithPhone){
             return NextResponse.json({
@@ -29,6 +32,7 @@ export async function POST(request: NextRequest) {
             })
         }
 
+        // 
         const newRegistration = new Registration({
             fullName: fullName,
             email: email,

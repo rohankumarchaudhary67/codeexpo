@@ -16,58 +16,22 @@ interface ProjectTicketProps {
 const Project_Ticket: React.FC<ProjectTicketProps> = ({ projectApplicationData }) => {
     return (
         <>
-            <div className="flex flex-col items-center justify-center">
-                <div className="bg-black opacity-80 inset-0 z-0"></div>
-                <div className="flex flex-col">
-                    <div className="bg-white relative drop-shadow-2xl  rounded-3xl p-4 m-4">
-                        <div className="flex-none sm:flex">
-                            <div className="flex-auto justify-evenly md:w-96">
-                                <div className="flex items-center justify-center">
-                                    <h1 className="text-black font-bold text-2xl">Project Pass</h1>
-                                </div>
-                                <div className="border-dashed border-black border-b-2 my-5">
-                                    <div className="absolute rounded-full w-5 h-5 bg-black -mt-2 -left-2"></div>
-                                    <div className="absolute rounded-full w-5 h-5 bg-black -mt-2 -right-2"></div>
-                                </div>
-                                <div className="flex flex-col text-black">
-                                    <div className="pr-16 md:pr-24">
-                                        <h1 className="text-sm pl-2">Project Host</h1>
-                                        <h1 className="font-bold text-3xl pl-2">{projectApplicationData.fullName}</h1>
-                                        <h1 className="text-lg pl-2">({projectApplicationData.email})</h1>
-                                    </div>
-                                    <div className="flex px-4 py-2 items-center justify-between text-black">
-                                        <div>
-                                            <h1>Project Name:</h1>
-                                            <h1>Project Details:</h1>
-                                        </div>
-                                        <div className="flex flex-col justify-end items-end">
-                                            <h1>{projectApplicationData.projectName}</h1>
-                                            <h1>{projectApplicationData.projectDetails}</h1>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-end items-end">
-                                        <h1 className="text-xl font-bold">#031719</h1>
-                                    </div>
-                                </div>
-                                <div className="border-black border-dashed border-b-2 my-2 pt-2">
-                                    <div className="absolute rounded-full w-5 h-5 bg-black -mt-2 -left-2"></div>
-                                    <div className="absolute rounded-full w-5 h-5 bg-black -mt-2 -right-2"></div>
-                                </div>
-                                <div className="flex items-center justify-between text-black">
-                                    <div>
-                                        <h1>Date:</h1>
-                                        <h1>Time:</h1>
-                                        <h1>Venue:</h1>
-                                    </div>
-                                    <div className="flex flex-col justify-end items-end">
-                                        <h1>19th-21th April, 2024</h1>
-                                        <h1>10:00 a.m.</h1>
-                                        <h1>Online Mode</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div className="bg-black py-4 sm:py-6 lg:py-10">
+                <div className="mx-auto max-w-screen-md px-4 md:px-8">
+                    <h2 className="text-center text-xl font-semibold text-white sm:text-2xl">{projectApplicationData.fullName}</h2>
+                    <h2 className="mb-2 text-center text-md text-gray-200 sm:text-xl md:mb-4">({projectApplicationData.email})</h2>
+
+                    <h1 className="mb-4 text-center text-2xl font-bold text-white sm:text-3xl md:mb-6">Project: {projectApplicationData.projectName}</h1>
+
+                    <blockquote className="mb-6 border-l-4 pl-4 italic text-gray-500 sm:text-lg md:mb-8 md:pl-6">{projectApplicationData.projectDetails}</blockquote>
+
+                    <h2 className="mb-1 text-xl font-semibold text-white sm:text-2xl md:mb-2">Problem It Solve</h2>
+
+                    <p className="text-gray-500 sm:text-lg md:mb-4">{projectApplicationData.problemItSolve}</p>
+
+                    <h2 className="mb-1 text-xl font-semibold text-white sm:text-2xl md:mb-2">Challenges We Ran Into It</h2>
+
+                    <p className="text-gray-500 sm:text-lg">{projectApplicationData.challengesWeRanIntoIt}</p>
                 </div>
             </div>
         </>
