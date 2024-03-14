@@ -24,7 +24,7 @@ export default function Apply_for_project() {
 
     const [error, setError] = useState('');
 
-    const [projectSubmission, setProjectSubmission] = useState(true);
+    const [projectSubmission, setProjectSubmission] = useState(false);
 
     return (
         <>
