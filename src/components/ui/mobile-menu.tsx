@@ -61,7 +61,7 @@ export default function MobileMenu() {
             >
                 <ul className="bg-gray-800 px-4 py-2">
                     <li>
-                        <Link href="/event" className="flex font-medium w-full text-[#3fc1c9] hover:text-[#04abcb] py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
+                        <Link href="/events" className="flex font-medium w-full text-[#3fc1c9] hover:text-[#04abcb] py-2 justify-center" onClick={() => setMobileNavOpen(false)}>
                             Event
                         </Link>
                     </li>

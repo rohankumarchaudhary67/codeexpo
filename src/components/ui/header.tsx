@@ -21,7 +21,7 @@ export default function Header() {
                         <ul className="flex grow justify-end flex-wrap items-center">
                             <li>
                                 <Link
-                                    href="/event"
+                                    href="/events"
                                     className="font-medium text-white hover:text-[#2f9fa6] px-4 py-3 flex items-center transition duration-150 ease-in-out"
                                 >
                                     Event
@@ -40,7 +40,7 @@ export default function Header() {
                                     href="/sponsors"
                                     className="font-medium text-white hover:text-[#2f9fa6] px-4 py-3 flex items-center transition duration-150 ease-in-out"
                                 >
-                                    Sponsors
+                                    Projects
                                 </Link>
                             </li>
                             <li>
