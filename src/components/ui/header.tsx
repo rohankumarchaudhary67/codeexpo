@@ -37,7 +37,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <Link
-                                    href="/sponsors"
+                                    href="/projects"
                                     className="font-medium text-white hover:text-[#2f9fa6] px-4 py-3 flex items-center transition duration-150 ease-in-out"
                                 >
                                     Projects
