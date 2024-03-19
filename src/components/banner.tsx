@@ -20,7 +20,7 @@ export default function Banner() {
                                 Register<span className="hidden sm:inline"> Now</span>
                             </Link>{' '}
                             <span className="italic px-1.5">or</span>{' '}
-                            <Link className="font-medium hover:underline text-[#00a7cd]" href="https://discord.gg/CXHWBCHs" target='_blank' rel=" noreferrer">
+                            <Link className="font-medium hover:underline text-[#00a7cd]" href="https://discord.com/invite/asMBt3yB8d" target='_blank' rel=" noreferrer">
                                 Join Discord Now
                             </Link>
                         </div>
