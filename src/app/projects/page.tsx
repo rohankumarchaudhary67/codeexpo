@@ -35,8 +35,8 @@ export default function Projects() {
                         <div className="container px-6 md:px-24 py-4 md:py-20 mx-auto">
                             <div className="flex flex-wrap -m-12">
                                 {
-                                    projects.map((project)=>(
-                                        <Project_block projectData={project}/>
+                                    projects.map((project, index)=>(
+                                        <Project_block projectData={project} key={index}/>
                                     ))
                                 }
                             </div>
