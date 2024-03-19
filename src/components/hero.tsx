@@ -25,7 +25,7 @@ export default function Hero() {
                     <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16 flex flex-col justify-center items-center">
                         <img src="/logo/logo.png" data-aos="fade-up" data-aos-delay="200" className='py-2' alt="" />
                         <p className="text-sm md:text-xl bg-clip-text text-transparent text-white pb-6 px-1" data-aos="fade-up" data-aos-delay="200">India&apos;s First Code Expo for beginners to unlock new opportunities in the tech world. Much like the Auto Expo, this event showcases a myriad of tech projects, offering attendees the chance to contribute across diverse tech stacks.</p>
-                        <h1 className='mb-4 text-2xl md:text-3xl font-mono font-bold' data-aos="fade-up">19<sup>th</sup>-21<sup>th</sup> Apr, 2024</h1>
+                        <h1 className='mb-4 text-2xl md:text-3xl font-mono font-bold' data-aos="fade-up">5<sup>th</sup>-7<sup>th</sup> May, 2024</h1>
                         <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center md:pt-6 w-full md:w-auto">
                             <div className='md:pt-0 pt-5 w-full md:w-auto' data-aos="fade-up" data-aos-delay="400">
                                 <div className="relative inline-flex group w-full md:w-auto">
