@@ -23,7 +23,7 @@ const registrationSchema = new mongoose.Schema({
     },
     branchName: {
         type: String
-    }
+    },
 }, { timestamps: true })
 
 const Registration = mongoose.models.Registrations || mongoose.model("Registrations", registrationSchema);

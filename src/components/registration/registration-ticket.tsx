@@ -2,10 +2,6 @@ interface RegistrationTicketProps {
     registrationData: {
         fullName: string;
         email: string;
-        phoneNumber: string;
-        collegeName: string;
-        collegeYear: string;
-        branchName: string;
     }
 }
 
@@ -31,9 +27,6 @@ const Registration_Ticket: React.FC<RegistrationTicketProps> = ({ registrationDa
                                         <h1 className="font-bold text-3xl pl-2">{registrationData.fullName}</h1>
                                         <h1 className="text-lg pl-2">({registrationData.email})</h1>
                                     </div>
-                                    <div className="flex justify-end items-end">
-                                        <h1 className="text-xl font-bold">#031719</h1>
-                                    </div>
                                 </div>
                                 <div className="border-black border-dashed border-b-2 my-2 pt-2">
                                     <div className="absolute rounded-full w-5 h-5 bg-black -mt-2 -left-2"></div>
@@ -46,7 +39,7 @@ const Registration_Ticket: React.FC<RegistrationTicketProps> = ({ registrationDa
                                         <h1>Venue:</h1>
                                     </div>
                                     <div className="flex flex-col justify-end items-end">
-                                        <h1>19th-21th April, 2024</h1>
+                                        <h1>5th-7th May, 2024</h1>
                                         <h1>10:00 a.m.</h1>
                                         <h1>Online Mode</h1>
                                     </div>

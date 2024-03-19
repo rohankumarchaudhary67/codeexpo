@@ -19,15 +19,15 @@ interface RegistrationFormProps {
         collegeYear: string;
         branchName: string;
     }>>;
-    error:String,
+    error: String,
     setError: React.Dispatch<React.SetStateAction<string>>;
     setProgress: React.Dispatch<React.SetStateAction<number>>;
     setRegistrationComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, setRegistrationData, error, setError, setProgress, setRegistrationComplete }) => {
-
     const registerNowBtn = async () => {
+
         if (registrationData.fullName === "") {
             setError('emptyName');
             return;
@@ -57,7 +57,7 @@ const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, 
             } else if (response.data.reason === "phoneExists") {
                 setError("phoneExists")
             }
-            if(response.data.success){
+            if (response.data.success) {
                 setRegistrationComplete(true);
             }
             setProgress(100);
@@ -75,22 +75,22 @@ const Registration_Form: React.FC<RegistrationFormProps> = ({ registrationData, 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="username">Full Name</label>
                             <input id="fullName" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.fullName} onChange={(e) => setRegistrationData({ ...registrationData, fullName: e.target.value })} />
-                            {error=="emptyName" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your name</p> : <p></p>}
+                            {error == "emptyName" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your name</p> : <p></p>}
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="emailAddress">Email Address</label>
                             <input id="email" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.email} onChange={(e) => setRegistrationData({ ...registrationData, email: e.target.value })} />
-                            {error=="emptyEmail" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your email</p> : <p></p>}
-                            {error=="invalidEmail" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Invalid Email</p> : <p></p>}
-                            {error=="emailExists" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Already registered with this email</p> : <p></p>}
+                            {error == "emptyEmail" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your email</p> : <p></p>}
+                            {error == "invalidEmail" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Invalid Email</p> : <p></p>}
+                            {error == "emailExists" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Already registered with this email</p> : <p></p>}
                         </div>
 
                         <div>
                             <label className="text-white dark:text-gray-200" htmlFor="password">Phone Number</label>
                             <input id="password" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" value={registrationData.phoneNumber} onChange={(e) => setRegistrationData({ ...registrationData, phoneNumber: e.target.value })} />
-                            {error=="emptyPhoneNumber" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your phone number</p> : <p></p>}
-                            {error=="phoneExists" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Already registered with this phone number</p> : <p></p>}
+                            {error == "emptyPhoneNumber" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Please enter your phone number</p> : <p></p>}
+                            {error == "phoneExists" ? <p className='text-red-600 text-sm pl-1 pt-1'>*Already registered with this phone number</p> : <p></p>}
                         </div>
 
                         <div>
